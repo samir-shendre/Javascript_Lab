@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🛒 Billing System</h1>
+    <h5>This Bill system made by Samir Shendre (24070521059)</h5>
+
+    <label>Customer Name</label>
+    <input type="text" id="customer" placeholder="Enter Customer Name">
+
+    <label>Product Name</label>
+    <input type="text" id="product" placeholder="Enter Product Name">
+
+    <label>Price (₹)</label>
+    <input type="number" id="price" placeholder="Enter Price">
+
+    <label>Quantity</label>
+    <input type="number" id="quantity" placeholder="Enter Quantity">
+
+    <label>Coupon Code</label>
+    <input type="text" id="coupon" placeholder="Enter Coupon Code (e.g. SIT20)">
+
+
+
+    <button onclick="generateBill()">Generate Bill</button>
+    <p id="couponMessage"></p>
+
+    <div class="bill" id="bill">
+
+        <h2>Invoice</h2>
+
+        <div class="row">
+            <span>Customer</span>
+            <span id="cname"></span>
+        </div>
+
+        <div class="row">
+            <span>Product</span>
+            <span id="pname"></span>
+        </div>
+
+        <div class="row">
+            <span>Price</span>
+            <span id="pprice"></span>
+        </div>
+
+        <div class="row">
+            <span>Quantity</span>
+            <span id="qty"></span>
+        </div>
+
+        <div class="row">
+            <span>Subtotal</span>
+            <span id="subtotal"></span>
+        </div>
+
+        <div class="row">
+            <span>GST (18%)</span>
+            <span id="gst"></span>
+        </div>
+
+        <div class="row">
+            <span>Discount</span>
+            <span id="discount">-₹0.00</span>
+        </div>
+
+        <div class="row total">
+            <span>Total Amount</span>
+            <span id="total"></span>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

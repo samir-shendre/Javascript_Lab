@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Validator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="background">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <div class="logo">
+            <i class="fa-solid fa-car-side"></i>
+        </div>
+
+        <h1>Vehicle Registration Validator</h1>
+
+        <p class="subtitle">
+            Enter Indian Vehicle Registration Number
+        </p>
+
+        <!-- Input -->
+        <div class="input-box">
+
+            <input
+                type="text"
+                id="regNumber"
+                placeholder="Example : MH12AB1234"
+                maxlength="10"
+                autocomplete="off">
+
+            <button onclick="validateVehicle()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Validate
+            </button>
+
+        </div>
+
+        <!-- Result Card -->
+        <div id="resultCard" class="result-card">
+
+            <h2>
+                <i class="fa-solid fa-id-card"></i>
+                Vehicle Details
+            </h2>
+
+            <div class="info">
+
+                <div class="row">
+                    <span>Registration Number</span>
+                    <span id="vehicleNo">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Owner Name</span>
+                    <span id="owner">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Vehicle Type</span>
+                    <span id="vehicleType">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Company</span>
+                    <span id="company">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Model</span>
+                    <span id="model">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Fuel Type</span>
+                    <span id="fuel">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Color</span>
+                    <span id="color">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Registration Date</span>
+                    <span id="regDate">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Valid Till</span>
+                    <span id="validTill">-</span>
+                </div>
+
+                <div class="row">
+                    <span>State</span>
+                    <span id="state">-</span>
+                </div>
+
+                <div class="row">
+                    <span>District</span>
+                    <span id="district">-</span>
+                </div>
+
+                <div class="row">
+                    <span>City</span>
+                    <span id="city">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Area / RTO Office</span>
+                    <span id="area">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Chassis Number</span>
+                    <span id="chassis">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Engine Number</span>
+                    <span id="engine">-</span>
+                </div>
+
+                <div class="row">
+                    <span>Status</span>
+                    <span id="status">-</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Validation Counter -->
+        <div class="counter">
+            <i class="fa-solid fa-chart-simple"></i>
+            Total Validations :
+            <span id="count">0</span>
+        </div>
+
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <span id="popupText"></span>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

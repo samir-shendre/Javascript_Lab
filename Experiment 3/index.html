@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div id="loginPage" class="login-container">
+
+        <div class="login-card">
+
+            <h1>🎓 Student Login</h1>
+
+            <p>Login to access the Student Grading System</p>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password (minimum 8 characters)">
+
+            <p id="loginError"></p>
+
+            <button type="button" onclick="login()">
+                Login
+            </button>
+            
+            <p>Samir Shendre (24070521059)</p>
+        </div>
+
+    </div>
+
+    <!-- ================= GRADING PAGE ================= -->
+
+    <div id="gradingPage" style="display:none;">
+
+        <div class="container">
+
+            <h2>Student Grading System</h2>
+
+            <form id="gradeForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name">
+
+                <input
+                    type="text"
+                    id="roll"
+                    placeholder="Roll Number">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="DBMS Marks">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="TOC Marks">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="JAVA Marks">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="JAVASCRIPT Marks">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="PYTHON Marks">
+
+                <input
+                    type="number"
+                    class="marks"
+                    placeholder="OS Marks">
+
+                <div class="btn-group">
+
+                    <button
+                        type="button"
+                        onclick="calculateResult()">
+                        Generate Result
+                    </button>
+
+                    <button
+                        type="reset">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

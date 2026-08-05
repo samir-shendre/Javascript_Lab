@@ -1,0 +1,331 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+    overflow:hidden;
+    color:#fff;
+}
+
+/* ===========================
+   Animated Background
+=========================== */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(25px);
+    animation:float 8s ease-in-out infinite;
+}
+
+.c1{
+    width:250px;
+    height:250px;
+    background:#2563eb;
+    top:-70px;
+    left:-70px;
+    opacity:.30;
+}
+
+.c2{
+    width:220px;
+    height:220px;
+    background:#9333ea;
+    bottom:-70px;
+    right:-70px;
+    opacity:.25;
+}
+
+.c3{
+    width:180px;
+    height:180px;
+    background:#06b6d4;
+    left:45%;
+    bottom:-60px;
+    opacity:.20;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ===========================
+      Main Card
+=========================== */
+
+.container{
+    width:550px;
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    animation:fade .8s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+        Logo
+=========================== */
+
+.logo{
+    text-align:center;
+    font-size:70px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.logo i{
+    text-shadow:0 0 20px #38bdf8;
+}
+
+/* ===========================
+        Heading
+=========================== */
+
+h1{
+    text-align:center;
+    margin-bottom:8px;
+    font-size:30px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+/* ===========================
+        Input
+=========================== */
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:#fff;
+    font-size:18px;
+    border:1px solid #334155;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+input:focus{
+    border:1px solid #38bdf8;
+    box-shadow:0 0 10px #38bdf8;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 25px rgba(59,130,246,.45);
+}
+
+button i{
+    margin-right:8px;
+}
+
+/* ===========================
+      Result Card
+=========================== */
+
+.result-card{
+    display:none;
+    margin-top:25px;
+    background:#111827;
+    border-radius:15px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.result-card h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f2937;
+    padding:12px 15px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.row:hover{
+    background:#273449;
+}
+
+.row span:first-child{
+    font-weight:600;
+    color:#e2e8f0;
+}
+
+.row span:last-child{
+    color:#38bdf8;
+    font-weight:600;
+}
+
+/* ===========================
+      Counter
+=========================== */
+
+.counter{
+    margin-top:20px;
+    text-align:center;
+    font-size:18px;
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+/* ===========================
+        Popup
+=========================== */
+
+.popup{
+    position:fixed;
+    top:25px;
+    right:-400px;
+    padding:15px 25px;
+    border-radius:10px;
+    color:#fff;
+    font-weight:bold;
+    transition:.5s;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    z-index:999;
+}
+
+.popup.show{
+    right:25px;
+}
+
+.success{
+    background:#22c55e;
+}
+
+.error{
+    background:#ef4444;
+}
+
+/* ===========================
+      Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+/* ===========================
+      Responsive
+=========================== */
+
+@media(max-width:600px){
+
+.container{
+    width:95%;
+    padding:25px;
+}
+
+.logo{
+    font-size:55px;
+}
+
+h1{
+    font-size:24px;
+}
+
+.row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+}
+
+button{
+    font-size:16px;
+}
+
+input{
+    font-size:16px;
+}
+
+}
