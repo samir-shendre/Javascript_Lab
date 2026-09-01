@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Text Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">⌘</div>
+            <h1>Student Text Analyzer</h1>
+            <p>Regex Based Information Extraction & Text Processing</p>
+        </header>
+
+        <main>
+
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="section-title">
+                    <span>01</span>
+                    <h2>Input Text</h2>
+                </div>
+
+                <textarea id="inputText" placeholder="Enter student information...">Student: Samir Shendre
+Roll Number: 24070521059
+Email: samir.shendre@gmail.com
+Phone Number: 9876543210
+Department: Computer science</textarea>
+
+                <button onclick="analyzeText()">
+                    <span>Analyze Information</span>
+                    <span class="arrow">→</span>
+                </button>
+            </section>
+
+
+            <!-- Results -->
+            <section class="output-section">
+
+                <div class="section-title">
+                    <span>02</span>
+                    <h2>Extracted Information</h2>
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="icon">👤</div>
+                        <div>
+                            <label>Student</label>
+                            <h3 id="student">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">🎓</div>
+                        <div>
+                            <label>Roll Number</label>
+                            <h3 id="roll">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">✉</div>
+                        <div>
+                            <label>Email Address</label>
+                            <h3 id="email">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">✓</div>
+                        <div>
+                            <label>Email Validation</label>
+                            <h3 id="emailStatus">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">☎</div>
+                        <div>
+                            <label>Phone Number</label>
+                            <h3 id="phone">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">✓</div>
+                        <div>
+                            <label>Phone Validation</label>
+                            <h3 id="phoneStatus">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">⌘</div>
+                        <div>
+                            <label>Department</label>
+                            <h3 id="department">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">#</div>
+                        <div>
+                            <label>Total Words</label>
+                            <h3 id="wordCount">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">Aa</div>
+                        <div>
+                            <label>Characters</label>
+                            <h3 id="charCount">—</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Processed Text -->
+            <section class="processed-section">
+
+                <div class="section-title">
+                    <span>03</span>
+                    <h2>Processed Text</h2>
+                </div>
+
+                <div class="processed-box">
+                    <div class="processed-header">
+                        <span>LOWERCASE + DEPARTMENT REPLACEMENT</span>
+                    </div>
+
+                    <p id="processedText">
+                        Your processed text will appear here...
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>JavaScript Practical • Regular Expressions & String Processing</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
