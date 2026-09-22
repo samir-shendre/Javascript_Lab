@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+/* Main Container */
+
+.container {
+    width: 450px;
+    padding: 35px;
+
+    border-radius: 20px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    transition: 0.4s;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#themeText {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Theme Buttons */
+
+.themes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.theme-btn {
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Button Colors */
+
+.theme-btn.light {
+    background: #f5f5f5;
+    color: #222;
+}
+
+.theme-btn.dark {
+    background: #222;
+    color: white;
+}
+
+.theme-btn.ocean {
+    background: #0077b6;
+    color: white;
+}
+
+.theme-btn.forest {
+    background: #2d6a4f;
+    color: white;
+}
+
+.theme-btn.purple {
+    background: #7209b7;
+    color: white;
+}
+
+.theme-btn.sunset {
+    background: #f3722c;
+    color: white;
+}
+
+/* Storage */
+
+.storage-box {
+    margin-top: 25px;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.storage-box p {
+    font-size: 14px;
+}
+
+.storage-box span {
+    font-weight: bold;
+}
+
+/* Reset Button */
+
+#clearBtn {
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #e63946;
+    color: white;
+
+    font-weight: bold;
+}
+
+/* =========================
+   THEMES
+========================= */
+
+/* Light */
+
+body.light {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light .container {
+    background: white;
+}
+
+/* Dark */
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+}
+
+/* Ocean */
+
+body.ocean {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: white;
+}
+
+body.ocean .container {
+    background: rgba(255, 255, 255, 0.95);
+    color: #023e8a;
+}
+
+/* Forest */
+
+body.forest {
+    background: linear-gradient(135deg, #1b4332, #74c69d);
+    color: white;
+}
+
+body.forest .container {
+    background: #f1faee;
+    color: #1b4332;
+}
+
+/* Purple */
+
+body.purple {
+    background: linear-gradient(135deg, #3a0ca3, #f72585);
+    color: white;
+}
+
+body.purple .container {
+    background: #faf5ff;
+    color: #3a0ca3;
+}
+
+/* Sunset */
+
+body.sunset {
+    background: linear-gradient(135deg, #f94144, #f8961e);
+    color: white;
+}
+
+body.sunset .container {
+    background: #fff8f0;
+    color: #c44536;
+}
